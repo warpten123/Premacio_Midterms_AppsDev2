@@ -22,6 +22,7 @@ describe('ResultComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
   it('ngOnChanges called', () =>{
     spyOn(component, 'ngOnChanges').and.callThrough();
     component.ngOnChanges();
@@ -46,7 +47,7 @@ describe('ResultComponent', () => {
     fixture.detectChanges();
     expect(component.result).toBe(0);
   })
-  it('if value of operation received is 3 (division) then result should be 5 (10 / 5)', ()=>{    
+  it('if value of operation received is 3 (division) then result should be 5 (50 / 10)', ()=>{    
     component.receive = {first: 50,second: 10,op: 3};
     component.compute();
     fixture.detectChanges();
