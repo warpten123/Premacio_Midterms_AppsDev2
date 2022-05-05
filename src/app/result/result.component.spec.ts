@@ -34,25 +34,25 @@ describe('ResultComponent', () => {
     fixture.detectChanges();
     expect(component.ngOnInit).toHaveBeenCalled();
   })
-  it('if value of operation received is 1 (addition) then result should be 4', ()=>{    
+  it('if value of operation received is 1 (addition) then result should be 4 (1 + 3)', ()=>{    
     component.receive = {first: 1,second: 3,op: 1};
     component.compute();
     fixture.detectChanges();
     expect(component.result).toBe(4);
   })
-  it('if value of operation received is 2 (subtraction) then result should be 0', ()=>{    
+  it('if value of operation received is 2 (subtraction) then result should be 0 (15 - 15)', ()=>{    
     component.receive = {first: 15,second: 15,op: 2};
     component.compute();
     fixture.detectChanges();
     expect(component.result).toBe(0);
   })
-  it('if value of operation received is 3 (division) then result should be 5', ()=>{    
+  it('if value of operation received is 3 (division) then result should be 5 (10 / 5)', ()=>{    
     component.receive = {first: 50,second: 10,op: 3};
     component.compute();
     fixture.detectChanges();
     expect(component.result).toBe(5);
   })
-  it('if value of operation received is 4 (multiplication) then result should be 100', ()=>{    
+  it('if value of operation received is 4 (multiplication) then result should be 100 (50 * 2)', ()=>{    
     component.receive = {first: 50,second: 2,op: 4};
     component.compute();
     fixture.detectChanges();
